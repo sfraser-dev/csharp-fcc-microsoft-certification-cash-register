@@ -21,15 +21,16 @@ expected.
 string? readResult = null;
 bool useTestData = false;
 
+// clean up the console
 Console.Clear();
 
-int[] cashTill = new int[] { 0, 0, 0, 0 };
+int[] cashTill = [0, 0, 0, 0];
 int registerCheckTillTotal = 0;
 
-// registerDailyStartingCash: $1 x 50, $5 x 20, $10 x 10, $20 x 5 => ($350 total)
+// registerDailyStartingCash in a 2d array: $1 x 50, $5 x 20, $10 x 10, $20 x 5 => ($350 total)
 int[,] registerDailyStartingCash = new int[,] { { 1, 50 }, { 5, 20 }, { 10, 10 }, { 20, 5 } };
 
-int[] testData = new int[] { 6, 10, 17, 20, 31, 36, 40, 41 };
+int[] testData = [6, 10, 17, 20, 31, 36, 40, 41];
 int testCounter = 0;
 
 LoadTillEachMorning(registerDailyStartingCash, cashTill);
@@ -45,6 +46,7 @@ Console.WriteLine(TillAmountSummary(cashTill));
 // display the expected registerDailyStartingCash total
 Console.WriteLine($"Expected till value: {registerCheckTillTotal}");
 Console.WriteLine();
+
 
 var valueGenerator = new Random((int)DateTime.Now.Ticks);
 
