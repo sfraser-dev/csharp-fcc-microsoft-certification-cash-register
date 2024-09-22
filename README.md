@@ -1,3 +1,3 @@
-# Microsoft and FCC Certificate in Foundational C\#  
+# Microsoft and FCC Certificate in C\#  
 
-Guided Project 6: Cash register program (focusing on exception handling).
+Project 6: Cash register program (focusing on exception handling).
